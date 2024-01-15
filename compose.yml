@@ -6,3 +6,10 @@ services:
       - "8080:8080"
     volumes:
       - "/mnt/wars:/usr/local/tomcat/webapps"
+  
+  my-mysql1:
+    image: mysql
+    ports:
+      - "3306:3306"
+    environment:
+      MYSQL_ROOT_PASSWORD: my-secret-pw
